@@ -6,3 +6,4 @@ Be sure to FORK and CLONE a copy from GitHub account.
 * Emma Prager
 * Sneha Rajulapally ([@Sneha](https://github.com/SnehaRajulapally))
 * Kinza Haque ([@Kinza](https://github.com/khaque1))
+* Alison McDonald ([@missamcdonald(https://github.com/missamcdonald)])
