@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <title>Project 2_Alpha Release</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="screen.css"/>
+    </head>
+    <body>
+        <header class= "head">
+            <h1>National Park Finder</h1>
+        </header>
+        <main class = "filters">
+            <section class="filter1">
+                <label>Location</label>
+                <input type="text" />
+                <label>Radius</label>
+                <input type="text" />
+            </section>
+            <br>
+            <section class="filter2">
+                <label>Activity</label>
+                <select>
+                    <option>Select options</option>
+                </select>
+                <label>Interests</label>
+                <select>
+                    <option>Select options</option>
+                </select>
+            </section>
+            <br>
+            <section class="buttons">
+                <button class="button1">Search</button>
+                <button class="button2">Clear</button>
+            </section>
+        </main>
+        <main class= "results">
+            <section class="map">
+                <img src="https://leafletjs.com/examples/quick-start/thumbnail.png" />
+            </section>
+            <section class="list">
+                    <article id = "image">
+                        <img id = "parkimage" src = "https://www.apple.com/newsroom/images/product/services/lifestyle/ApplePay-and-AppleWatch-celebrate-americas-national-parks-08232018_big.jpg.large.jpg"/>
+                    </article>
+                    <article id = "text">
+                        <p id= "parkname"><b>Yosemite National Park </b></p>
+                        <p id= "parkdesignation">National Park</p>
+                        <p id= "parklocation">California</p>
+                        <p id= "parkradius">Park Radius</p>
+                    </article>
+            </section>
+        </main>
+
+        <script src = main.js></script>
+    </body>
+
+</html>
