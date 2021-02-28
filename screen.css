@@ -1,0 +1,84 @@
+
+.head{
+    background-color: brown;
+    text-align: center;
+    height: 70px;
+}
+
+h1{
+    text-align: center;
+    font-size :45px;
+    font-weight: bold;
+    color:white;
+    padding-top:4px;
+}
+
+.filters{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: silver;
+}
+
+.filter1{
+    padding-top: 20px;
+}
+
+.filter3{
+    padding-left: 30px;
+}
+
+.button1{
+    background-color: #4CAF50;
+    color: white;
+    font-size: 20px;
+    margin: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    height: 40px;
+    width:100px;
+}
+
+.button2{
+    background-color: #f44336;
+    color: white;
+    font-size: 20px;
+    margin: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    height: 40px;
+    width:100px;
+}
+
+.map{
+    text-align: center;
+    margin: 0 auto 0 auto;
+    margin-top: 20px;
+    max-width: 70%;
+    height:auto;
+}
+
+.list{
+    margin: 0 auto 0 auto;
+    padding:20px;
+    max-width: 70%;
+    text-align: center;
+}
+
+#parkimage{
+    max-width: 50%;
+    height: auto;
+    text-align: right;
+}
+
+#image{
+    float: left;
+    width: 30%;
+    text-align: center;
+  }
+
+#text{
+    float: right;
+    width: 70%;
+    text-align: left;
+  }
