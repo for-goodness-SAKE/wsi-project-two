@@ -4,7 +4,9 @@
         <title>Project 2_Alpha Release</title>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <link rel="stylesheet" href="screen.css"/>
+        <link rel="stylesheet" type="text/css" href="screen.css"/>
+        <link rel="stylesheet" type="text/css" href="map.css"/>
+        <script src = map.js></script>
     </head>
     <body>
         <header class= "head">
@@ -36,7 +38,9 @@
         </main>
         <main class= "results">
             <section class="map">
-                <img src="https://leafletjs.com/examples/quick-start/thumbnail.png" />
+                
+                <div id="map"></div>
+
             </section>
             <section class="list">
                     <article id = "image">
@@ -51,7 +55,11 @@
             </section>
         </main>
 
-        <script src = main.js></script>
+        <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpc4e_h8r1JlYK-xNhbSdhTmGBITBlirY&callback=initMap&libraries=&v=weekly"
+            async
+        ></script>
+
     </body>
 
 </html>
