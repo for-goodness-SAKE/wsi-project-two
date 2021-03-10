@@ -18,6 +18,7 @@
     background-color: #edbb34;
 }
 
+<<<<<<< HEAD
 .filter1{
     font-family: verdana, sans-serif;
     width:200px;
@@ -36,6 +37,16 @@ input, label{
   padding-left: 3em;
 }
 
+=======
+.filter1, .filter2{
+  font-family: verdana, sans-serif;
+}
+
+input, label{
+  padding-left: 3em;
+}
+
+>>>>>>> 784837308ee68f19c2d16df7f6c6fb57ceb3be9f
 .buttons{
     background-color: #77995b;
     color: white;
@@ -106,6 +117,7 @@ input, label{
   *{
     padding: 0;
     margin: 0;
+<<<<<<< HEAD
   }
 
 .multiselect1{
@@ -180,3 +192,6 @@ input, label{
   #checkboxes2 label:hover {
     background-color: #1e90ff;
   }
+=======
+  }
+>>>>>>> 784837308ee68f19c2d16df7f6c6fb57ceb3be9f
