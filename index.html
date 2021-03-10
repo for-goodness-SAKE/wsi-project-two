@@ -13,34 +13,75 @@
             <h1>National Park Finder</h1>
         </header>
         <main class = "filters">
-            <section class="filter1">
-                <label>Location</label>
-                <input type="text" />
-                <label>Radius</label>
-                <input type="text" />
-            </section>
-            <br>
-            <section class="filter2">
-                <label>Activity</label>
-                <select>
-                    <option>Select options</option>
-                </select>
-                <label>Interests</label>
-                <select>
-                    <option>Select options</option>
-                </select>
-            </section>
+                <form id="filter">
+                    <section class="filter1">
+                    <label>Location</label>
+                    <input id="loc" type="text" />
+                    <label>Radius</label>
+                        <select id="rad">
+                            <option value="SelectRadius">Select Radius</option>
+                            <option value="<10miles">< 10 miles</option>
+                            <option value="<25miles">< 25 miles</option>
+                            <option value="<50miles">< 50 miles</option>
+                            <option value="<75miles">< 75 miles</option>
+                            <option value="<100miles">< 100 miles</option>
+                            <option value="<125miles">< 125 miles</option>
+                            <option value="<150miles">< 150 miles</option>
+                            <option value="<175miles">< 175 miles</option>
+                            <option value="<200miles">< 200 miles</option>
+                            <option value="<225miles">< 225 miles</option>
+                            <option value="<250miles">< 250 miles</option>
+                            <option value="<275miles">< 275 miles</option>
+                            <option value="<300miles">< 300 miles</option>
+                            <option value=">300miles">> 300 miles</option>
+                        </select>
+                    </section>
+                <br>
+                <form>
+                    <section class="filter2">
+                            <label>Activities</label>
+                            <div class="selectBox1" onclick="showCheckboxes1()">
+                                <select>
+                                    <option value="SelectActivities">Select Activities</option>
+                                </select>
+                                <div class="overSelect1"></div>
+                            </div>
+                            <div id="checkboxes1" multiple>
+                                <label for="one">
+                                <input type="checkbox" id="one" />First checkbox</label>
+                                <label for="two">
+                                <input type="checkbox" id="two" />Second checkbox</label>
+                                <label for="three">
+                                <input type="checkbox" id="three" />Third checkbox</label>
+                            </div>
+                                <label>Interests</label>
+                            <div class="selectBox2" onclick="showCheckboxes2()">
+                                <select>
+                                    <option value="SelectInterests">Select Interests</option>
+                                </select>
+                                <div class="overSelect2"></div>
+                            </div>
+                            <div id="checkboxes2" multiple>
+                                <label for="one">
+                                <input type="checkbox" id="four" />First checkbox</label>
+                                <label for="two">
+                                <input type="checkbox" id="five" />Second checkbox</label>
+                                <label for="three">
+                                <input type="checkbox" id="six" />Third checkbox</label>
+                            </div>
+                            </section>
+                    </form>
+            </form>
             <br>
             <section class="buttons">
-                <button class="button1">Search</button>
-                <button class="button2">Clear</button>
+                <button onclick="search()" class="button1">Search</button>
+                <button onclick="reset()" class="button2">Clear</button>
             </section>
         </main>
+        </form>
         <main class= "results">
             <section class="map">
-                
                 <div id="map"></div>
-
             </section>
             <section class="list">
                     <article id = "image">
@@ -54,12 +95,8 @@
                     </article>
             </section>
         </main>
-
-        <script
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpc4e_h8r1JlYK-xNhbSdhTmGBITBlirY&callback=initMap&libraries=&v=weekly"
-            async
-        ></script>
-
+    <script type="text/javascript" src = search.js></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpc4e_h8r1JlYK-xNhbSdhTmGBITBlirY&callback=initMap&libraries=&v=weekly"
+    async></script>
     </body>
-
 </html>
