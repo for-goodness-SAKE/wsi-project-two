@@ -1,3 +1,4 @@
+
 .head{
     margin-top: 0;
     text-align: center;
@@ -18,18 +19,8 @@
     background-color: #edbb34;
 }
 
-.filter1{
-    font-family: verdana, sans-serif;
-    width:200px;
-  }
-
-.filter2{
+.filter1, .filter2{
   font-family: verdana, sans-serif;
-  width:200px;
-}
-
-#rad{
-    width:200px;
 }
 
 input, label{
@@ -106,77 +97,4 @@ input, label{
   *{
     padding: 0;
     margin: 0;
-  }
-
-.multiselect1{
-    width:200px;
-}
-
-.selectBox1{
-    position: relative;
-}
-
-.selectBox1 select {
-    width: 100%;
-}
-
-.overSelect1 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-  }
-
-  #checkboxes1 {
-    display: none;
-    border: 1px #dadada solid;
-    background-color:white;
-  }
-
-  #checkboxes1 label {
-    display: block;
-    font-weight: normal;
-    font-size:15px;
-  }
-
-  #checkboxes1 label:hover {
-    background-color: #1e90ff;
-  }
-
-  .multiselect2{
-    width:200px;
-}
-
-.selectBox2{
-    position: relative;
-}
-
-.selectBox2 select {
-    width: 100%;
-}
-
-.overSelect2 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-  }
-
-  #checkboxes2 {
-    display: none;
-    border: 1px #dadada solid;
-    background-color:white;
-  }
-
-  #checkboxes2 label {
-    display: block;
-    font-weight: normal;
-    font-size:15px;
-    font-family: sans-serif;
-  }
-
-  #checkboxes2 label:hover {
-    background-color: #1e90ff;
   }
