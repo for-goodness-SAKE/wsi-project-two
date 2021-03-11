@@ -2,8 +2,8 @@
 ### for goodness SAKE
 ###### Spring 2021
 
-## Problem 
-On the National Park Service (NPS) website, there are 2 different pages to search for National Parks.  But there is no tool to geographically plan a trip.  
+## Problem
+On the National Park Service (NPS) website, there are 2 different pages to search for National Parks.  But there is no tool to geographically plan a trip.
 
 For example, the main search page, [Find a Park](https://www.nps.gov/findapark/index.htm), uses a US map that is not geographically correct and is bounded by state lines.  Even if a user would like to explore an area that encompasses a variety of states, they cannot select multiple states at once.
 
@@ -43,9 +43,9 @@ A maps API will be needed to utilize this data on a map.  The Google Maps API ha
 This system could be completed in a 6 week sprint.
 
 ## Rabbit Holes
-In addition to viewing parks within a certain radius of a location, it may be helpful for the user to select parks they would like to travel to and create an interactive route.  This could involve generating a road trip between a list of parks, allowing the user to remove parks and edit the order they are visited in as they view routes with different mileages and drive times.  The user may also find it helpful to enter a start and end address that are not national parks.
+A rabbit hole that can be considered for this sprint would be a feature that allows the user to view parks within a certain radius of a location. Users would be able to select parks in a certain radius and can then create an interactive route to such parks. The Google Maps API would embed maps to display the directions to and from the parks. The API also has a [directions mode](https://developers.google.com/maps/documentation/embed/embedding-map#directions_mode) that would be used to implement this if desired. This could involve generating directions between a list of parks, allowing the user to remove parks and edit the order they are visited in as they view routes with different mileages and drive times. However, this would be considered if the initial scope of the project is completed. Although this would be a nice feature to have, it is not necessary in this sprint and can be considered afterwards.
 
-Google Maps API embedded maps also has a [directions mode](https://developers.google.com/maps/documentation/embed/embedding-map#directions_mode) that would be used to implement this if desired.
+Amenities could be useful and are a part of the API for the NPS and could assist the user when it comes to things such as picnic sites, toilets, etc.
 
 ## No Goes
 National Parks are represented by regions which are groups of states.  This would create a larger geographical area for the user to search but it still bounded.  It is also not represented in the NPS API.
