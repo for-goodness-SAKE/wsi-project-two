@@ -3,7 +3,7 @@
 ###### Spring 2021
 
 ## Problem
-On the National Park Service (NPS) website, there are 2 different pages to search for National Parks.  But there is no tool to geographically plan a trip.  
+On the National Park Service (NPS) website, there are 2 different pages to search for National Parks.  But there is no tool to geographically plan a trip.
 
 For example, the main search page, [Find a Park](https://www.nps.gov/findapark/index.htm), uses a US map that is not geographically correct and is bounded by state lines.  Even if a user would like to explore an area that encompasses a variety of states, they cannot select multiple states at once.
 
