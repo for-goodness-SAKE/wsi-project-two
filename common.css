@@ -1,0 +1,56 @@
+.head{
+    margin-top: -50px;
+    font-size :2.5em;
+    text-align: center;
+    margin:auto;
+    color: white;
+    padding-top: 0.75% ;
+    padding-bottom:0.75% ;
+    display: block;
+    font-family: times, serif;
+    background-color: #9D4040;
+    width: 70%;
+    height: auto;
+}
+ 
+.filters{
+    margin: 0 auto 0 auto;
+    text-align: center;
+    color: white;
+    height: auto;
+    background-color: #357C95;
+    width: 70%;
+}
+
+#filter{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin: 0 auto 0 auto;
+    text-align: left;
+    font-size: 1.5em;
+    color:white;
+    height: auto;
+    background-color: #357C95;
+    width: 70%;
+}
+
+.form{
+    margin-left: 20px;
+} 
+
+.form input ~ .form-group {
+    margin: 10px 0;
+}
+
+.form input ~ .form-group > label {
+    margin-left: 0;
+    padding-left: 0;
+}
+  
+.form input:invalid ~ .form-group {
+    display: none;
+}
+
+.form input + label{
+    padding-left: 0;
+}

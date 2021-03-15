@@ -1,0 +1,191 @@
+.filter2{
+  font-family: verdana, sans-serif;
+  width:90%;
+  margin: 0 auto 0 auto;
+}
+
+#activ{
+  width:300px;
+  height:30px;
+  font-size: 0.8em ;
+}
+
+#intr{
+  width:300px;
+  height:30px;
+  font-size: 0.8em ;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+}
+
+.map{
+  text-align: center;
+  margin: 0 auto 0 auto;
+  max-width: 70%;
+  height: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.list{
+  text-align: center;
+  margin: 0 auto 0 auto;
+  max-width: 70%;
+  display: block;
+  height: auto;
+  font-family: verdana, sans-serif;
+  background-color: #D7D6D6;
+  width: 70%;
+}
+
+#parkimage{
+  max-width: 50%;
+  padding: 1em;
+}
+
+#parkname{
+ font-weight: bold;
+ font-family: times, serif;
+ font-size: 1.5em;
+ text-decoration: underline;
+ cursor: pointer;
+}
+
+#parkdesignation{
+ font-family: times, serif;
+ font-size: 1em;
+ text-transform: uppercase;
+}
+
+#parklocation{
+  font-family: times, serif;
+  font-size: 1em;
+}
+
+#parkradius{
+ font-style: italic;
+ font-weight: bold;
+ font-family: times, serif;
+ font-size: 1em;
+}
+
+#image{
+  text-align: center;
+  margin: 0 auto 0 auto;
+  max-width: 60%;
+}
+
+#text{
+  text-align: center;
+  margin: 0 auto 0 auto;
+  max-width: 60%;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.multipleSelection1 {
+  width: 200px;
+}
+
+.multiselect1{
+  width:200px;
+}
+
+.selectBox1{
+  position: relative;
+}
+
+.selectBox1 select {
+  width: 100%;
+  height:30px;
+  font-size: 1em;
+}
+
+.overSelect1 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+#checkboxes1 {
+  display: none;
+  border: 1px #dadada solid;
+  background-color:white;
+  color: black;
+  text-align: left;
+  padding-left:5px;
+}
+
+#checkboxes1 label {
+  display: block;
+  font-weight: normal;
+  font-size:15px;
+}
+
+#checkboxes1 label:hover {
+  background-color: #1e90ff;
+}
+
+.multipleSelection1 {
+  width: 200px;
+}
+
+.multiselect2{
+  width:200px;
+}
+
+.selectBox2{
+  position: relative;
+}
+
+.selectBox2 select {
+  width: 100%;
+  height:30px;
+  font-size: 1em ;
+}
+
+.overSelect2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+#checkboxes2 {
+  display: none;
+  border: 1px #dadada solid;
+  background-color:white;
+  color: black;
+  text-align: left;
+  padding-left:5px;
+}
+
+#checkboxes2 label {
+  display: block;
+  font-weight: normal;
+  font-size:15px;
+  font-family: sans-serif;
+}
+
+#checkboxes2 label:hover {
+  background-color: #1e90ff;
+}
+
+.container {
+  font-weight: normal;
+  font-size:15px;
+  font-family: sans-serif;
+  border:2px solid #ccc;
+  width:300px;
+  height: 100px;
+  overflow-y: scroll;
+}

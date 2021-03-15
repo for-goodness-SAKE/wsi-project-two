@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <title>Project 2_Alpha Release</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" type="text/css" href="reset.css"/>
+        <link rel="stylesheet" type="text/css" href="common.css"/>
+        <link rel="stylesheet" type="text/css" href="results.css"/>
+        <script src = map.js></script>
+    </head>
+    <body>
+        <header class= "head">
+            <h1>National Park Finder</h1>
+        </header>
+        <main class = "filters">
+            <form id="filter">
+                <section class="filter2">
+                    <div class="multipleSelection1"> 
+                        <label>Activities</label>
+                        <div id="activ" class="selectBox1" onclick="showCheckboxes1()">
+                            <select>
+                                <option value="SelectActivities">Select Activities</option>
+                            </select>
+                            <div class="overSelect1"></div>
+                        </div>
+                        <div id="checkboxes1" class="container">
+                            <input type="checkbox" /> This is checkbox <br />
+                            <input type="checkbox" /> This is checkbox <br />
+                            <input type="checkbox" /> This is checkbox <br />
+                            <input type="checkbox" /> This is checkbox <br />
+                            <input type="checkbox" /> This is checkbox <br />
+                            <input type="checkbox" /> This is checkbox <br />
+                            <input type="checkbox" /> This is checkbox <br />
+                            <input type="checkbox" /> This is checkbox <br />
+                        </div>
+                    </div>
+                    <div class="multipleSelection2"> 
+                        <label>Interests</label>
+                        <div id="intr"class="selectBox2" onclick="showCheckboxes2()">
+                            <select>
+                                <option value="SelectInterests">Select Interests</option>
+                            </select>
+                            <div class="overSelect2"></div>
+                        </div>
+                        <div id="checkboxes2" class="container">
+                            <input type="checkbox" /> This is checkbox <br />
+                            <input type="checkbox" /> This is checkbox <br />
+                            <input type="checkbox" /> This is checkbox <br />
+                            <input type="checkbox" /> This is checkbox <br />
+                            <input type="checkbox" /> This is checkbox <br />
+                            <input type="checkbox" /> This is checkbox <br />
+                            <input type="checkbox" /> This is checkbox <br />
+                            <input type="checkbox" /> This is checkbox <br />
+                        </div>
+                    </div>
+                </section>
+            </form>
+        </main>
+        <main class= "results">
+            <section class="map">
+                <div id="map"></div>
+            </section>
+            <section class="list">
+                    <article id = "image">
+                        <img id = "parkimage" src = "https://www.apple.com/newsroom/images/product/services/lifestyle/ApplePay-and-AppleWatch-celebrate-americas-national-parks-08232018_big.jpg.large.jpg"/>
+                    </article>
+                    <article id = "text">
+                        <p id= "parkname"><b>Yosemite National Park </b></p>
+                        <p id= "parkdesignation">National Park</p>
+                        <p id= "parklocation">California</p>
+                        <p id= "parkradius">Park Radius</p>
+                    </article>
+            </section>
+        </main>
+        <script type="text/javascript" src = search.js></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpc4e_h8r1JlYK-xNhbSdhTmGBITBlirY&callback=initMap&libraries=&v=weekly"
+            async></script>
+    </body>
+</html> 
