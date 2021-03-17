@@ -1,24 +1,32 @@
 function initMap() {
-  const iit = { lat: 41.834819, lng: -87.626893 };
+  var latitude = parseFloat(localStorage.getItem("latitude"));
+  var longitude = parseFloat(localStorage.getItem("longitude"));
+  var radius = localStorage.getItem("radius");
+  console.log(latitude,longitude,radius);
+  var place = { lat: latitude,lng: longitude};
+  console.log(place);
   const map = new google.maps.Map(document.getElementById("map"), {
-    center: iit,
+    center: place,
     zoom: 8,
   });
   const iconBase = "http://maps.google.com/mapfiles/kml/paddle/";
   const marker = new google.maps.Marker({
-    position: iit,
+    position: place,
     icon: iconBase + "blu-stars.png",
     map: map,
   });
+
+  /*
   const markers = locations.map((location, i) => {
     return new google.maps.Marker({
       position: location,
       icon: iconBase + "pink-blank.png",
       map: map,
     });
-  });
+  });*/
 }
 
+/*
 const locations = [
   { lat: 41.80, lng: -87.77 },
   { lat: 41.82, lng: -87.61 },
@@ -32,3 +40,4 @@ const locations = [
   { lat: 41.6, lng: -87.5 },
   { lat: 42.9, lng: -87.3 },
 ];
+*/
