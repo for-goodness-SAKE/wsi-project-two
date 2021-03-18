@@ -21,6 +21,7 @@
                             <br> 3.Park Name - Ex:Yosemite National Park, Grand Canyon National Park</span>
                           </div>
                         <input id="loc" placeholder="Grand Canyon National Park *" type="text" value="" required>
+                        <button onclick="current_location()" class="location">Get Current Location</button>
                         <div class = "form-group">
                             <label for="radius">How far do you want to travel?</label>
                                 <select id="rad">
@@ -43,7 +44,7 @@
                     </section>
                 </form>
             <section class="buttons">
-                <button onclick="search()" class="button1">Search</button>
+                <button onclick= "search()"  class="button1">Search</button>
                 <button onclick="reset()" class="button2">Clear</button>
             </section>
         </main>
