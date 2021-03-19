@@ -1,3 +1,6 @@
+var nps_token = config.NPS_TOKEN;
+var maps_token = config.MAPS_TOKEN;
+
 function getLocation() {
   if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(showPosition);
