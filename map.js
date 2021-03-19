@@ -1,3 +1,6 @@
+var nps_token = config.NPS_TOKEN;
+var maps_token = config.MAPS_TOKEN;
+
 function initMap() {
   var latitude = parseFloat(localStorage.getItem("latitude"));
   var longitude = parseFloat(localStorage.getItem("longitude"));
