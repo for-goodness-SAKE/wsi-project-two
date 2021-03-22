@@ -18,5 +18,8 @@
   "homepage": "https://github.com/khaque1/wsi-project-two#readme",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.22.0"
   }
 }
