@@ -44,3 +44,93 @@ const locations = [
   { lat: 42.9, lng: -87.3 },
 ];
 */
+
+
+/*
+// Calling in the NPS APIs - Option 1 -- Not pulling in the correct information, undefined
+
+const Http = new XMLHttpRequest();
+const a = 'https://developer.nps.gov/api/v1/activities?activitiesCode=acad&api_key=' + nps_token;
+Http.open("GET", a);
+
+
+//const a = 'https://developer.nps.gov/api/v1/activities?activitiesCode=acad&api_key=' + nps_token;
+
+Http.onreadystatechange=(e)=> {
+  for(var i = 0; i < a.length; i++) {
+
+    var row = document.createElement('input');
+    row.type = "checkbox";
+    row.value = document.createTextNode(a[i].name);
+    checkboxDiv = document.getElementById("checkboxes1");
+    checkboxDiv.appendChild(row);
+    
+    console.log(a[i].name)
+    console.log(Http.responseText)
+}}
+
+Http.send();
+*/
+
+
+/*
+// Calling in the NPS APIs - Option 2 - brought up the CORS error
+const url = 'https://developer.nps.gov/api/v1/activities?activitiesCode=acad&api_key=' + nps_token;
+
+let myRequest = new XMLHttpRequest();
+myRequest.onreadystatechange = function() {
+  if (myRequest.readyState == 4 && myRequest.status == 200) {
+      let a = JSON.parse(myRequest.responseText);
+      let list = document.createElement('ul');
+          for(var i = 0; i < a.length; i++) {
+              console.log(a[i]);
+              var row = document.createElement('li');
+              row.id = a[i].data.id;
+              var cellproduct = document.createElement('li');
+              var protext = document.createTextNode(a[i].data.name);
+              cellproduct.appendChild(protext);
+              row.appendChild(cellproduct);
+              list.appendChild(row);
+          }
+              document.getElementById('checkboxes1').appendChild(list);
+          }
+          };
+
+          myRequest.open('GET', "'https://developer.nps.gov/api/v1/activities?activitiesCode=acad&api_key=' + nps_token");
+          myRequest.send();
+*/
+
+/*
+// Calling in the NPS APIs - Option 3
+// api url 
+const api_url =  
+      "'https://developer.nps.gov/api/v1/activities?activitiesCode=acad&api_key=' + nps_token"; 
+  
+// Defining async function 
+async function getapi(url) { 
+    
+    // Storing response 
+    const response = await fetch(url); 
+    
+    // Storing data in form of JSON 
+    var data = await response.json(); 
+    console.log(data); 
+    if (response) { 
+      for(var i = 0; i < api_url.length; i++) {
+        var row = document.createElement('input');
+        row.type = "checkbox";
+        row.value = document.createTextNode(api_url[i].name);
+        checkboxDiv = document.getElementById("checkboxes1");
+        checkboxDiv.appendChild(row);
+        
+        console.log(data)
+  
+    }
+    
+    show(data); 
+} 
+// Calling that async function 
+getapi(api_url); 
+}
+
+*/

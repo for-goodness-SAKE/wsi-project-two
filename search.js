@@ -91,3 +91,4 @@ function showCheckboxes2() {
 function reset() {
   document.getElementById("filter").reset();
 }
+
