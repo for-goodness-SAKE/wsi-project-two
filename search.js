@@ -1,15 +1,3 @@
-/** Get token from config file to access NPS API:
-* {@link https://www.nps.gov/subjects/developer/api-documentation.htm}
-* @type {string}
-*/
-var nps_token = config.NPS_TOKEN;
-
-/** Get token from config file to access Google Maps API:
-* {@link https://maps.googleapis.com/maps/api/js}
-* @type {string}
-*/
-var maps_token = config.MAPS_TOKEN;
-
 /**  
 * Function to calculate current position  
 * @function getLocation
