@@ -1,20 +1,57 @@
+/**  
+* Function to load asynchronous Google API map results for the National Parks based on the user's geolocation
+* or user's input location 
+* @function initMap
+*/
 function initMap() {
+/** Get the latitude value from index page
+ *  @var {number} latitude
+*/
   var latitude = parseFloat(localStorage.getItem("latitude"));
+/** Get the longitude value from index page 
+ *  @var {number} longitude
+*/
   var longitude = parseFloat(localStorage.getItem("longitude"));
+/** Get the radius value from index page 
+ *  @var {number} radius
+*/
   var radius = localStorage.getItem("radius");
   console.log(latitude,longitude,radius);
+/** Place has the latitude and longitude positions of the location
+ *  @var {string} place
+ */
   var place = { lat: latitude,lng: longitude};
   console.log(place);
+/** Map to view the park results on HTML page with location and zoom
+*  @constant map
+*  @type {Object}
+*  @property {string} center location on map
+*  @property {number} zoom zoom map
+*/
   const map = new google.maps.Map(document.getElementById("map"), {
     center: place,
     zoom: 8,
   });
+/** Get the icon from the link to represent the location on map: 
+*  {@link http://maps.google.com/}
+*  @constant iconBase
+*  @type {URL}
+*/
   const iconBase = "http://maps.google.com/mapfiles/kml/paddle/";
+
+/** Icon to represent the location on map 
+*  @constant marker
+*  @type {Object}
+*  @property {string} position location on map
+*  @property {image} icon icon image
+*  @property {Map} map map
+*/
   const marker = new google.maps.Marker({
     position: place,
     icon: iconBase + "blu-stars.png",
     map: map,
   });
+}
 
   /*
   const markers = locations.map((location, i) => {
@@ -24,7 +61,6 @@ function initMap() {
       map: map,
     });
   });*/
-}
 
 /*
 const locations = [
@@ -45,17 +81,12 @@ const locations = [
 
 /*
 // Calling in the NPS APIs - Option 1 -- Not pulling in the correct information, undefined
-
 const Http = new XMLHttpRequest();
 const a = 'https://developer.nps.gov/api/v1/activities?activitiesCode=acad&api_key=' + nps_token;
 Http.open("GET", a);
-
-
 //const a = 'https://developer.nps.gov/api/v1/activities?activitiesCode=acad&api_key=' + nps_token;
-
 Http.onreadystatechange=(e)=> {
   for(var i = 0; i < a.length; i++) {
-
     var row = document.createElement('input');
     row.type = "checkbox";
     row.value = document.createTextNode(a[i].name);
@@ -65,7 +96,6 @@ Http.onreadystatechange=(e)=> {
     console.log(a[i].name)
     console.log(Http.responseText)
 }}
-
 Http.send();
 */
 
@@ -73,7 +103,6 @@ Http.send();
 /*
 // Calling in the NPS APIs - Option 2 - brought up the CORS error
 const url = 'https://developer.nps.gov/api/v1/activities?activitiesCode=acad&api_key=' + nps_token;
-
 let myRequest = new XMLHttpRequest();
 myRequest.onreadystatechange = function() {
   if (myRequest.readyState == 4 && myRequest.status == 200) {
@@ -92,7 +121,6 @@ myRequest.onreadystatechange = function() {
               document.getElementById('checkboxes1').appendChild(list);
           }
           };
-
           myRequest.open('GET', "'https://developer.nps.gov/api/v1/activities?activitiesCode=acad&api_key=' + nps_token");
           myRequest.send();
 */
@@ -129,5 +157,4 @@ async function getapi(url) {
 // Calling that async function 
 getapi(api_url); 
 }
-
 */
