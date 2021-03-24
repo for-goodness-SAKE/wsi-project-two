@@ -77,6 +77,29 @@ if (!expanded) {
 }
 }
 
+//Pull in the activity names from the NPS API and display them as options in the drop down list
+function activities() {
+  const Http = new XMLHttpRequest();
+  const url = 'https://developer.nps.gov/api/v1/activities?activitiesCode=acad&api_key=' + nps_token;
+  Http.open("GET", url, false);
+  Http.send(null);
+  var res = Http.responseText;
+  responseJson = JSON.parse(res);
+  var list = (responseJson.data).length;
+  for (var i = 0; i < list; i++) {
+    var counter = responseJson.data[i].name;
+    id =  responseJson.data[i].id;
+    console.log(counter);
+    console.log(id);
+    
+    document.getElementById("checkboxes1").innerHTML += 
+              "<input type='checkbox' /> " + counter + " <br />";
+     
+  }
+}
+activities();
+
+
 function showCheckboxes2() {
   var checkboxes = document.getElementById("checkboxes2");
   if (!expanded) {
@@ -87,6 +110,30 @@ function showCheckboxes2() {
     expanded = false;
   }
 }
+
+//Pull in the activity names from the NPS API and display them as options in the drop down list
+function interests() {
+  const Http = new XMLHttpRequest();
+  const url = 'https://developer.nps.gov/api/v1/topics?topicsCode=acad&api_key=' + nps_token;
+  Http.open("GET", url, false);
+  Http.send(null);
+  var res = Http.responseText;
+  responseJson = JSON.parse(res);
+  var list = (responseJson.data).length;
+  for (var i = 0; i < list; i++) {
+    var counter = responseJson.data[i].name;
+    id =  responseJson.data[i].id;
+    console.log(counter);
+    console.log(id);
+    
+    document.getElementById("checkboxes2").innerHTML += 
+              "<input type='checkbox' /> " + counter + " <br />";
+     
+  }
+}
+interests();
+
+
 
 function reset() {
   document.getElementById("filter").reset();
