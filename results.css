@@ -64,11 +64,10 @@
  cursor: pointer;
 }
 
-/** Set styling for parkdesignation text in list results section*/
-#parkdesignation{
+/** Set styling for parkdescription text in list results section*/
+#parkdescription{
  font-family: times, serif;
  font-size: 1em;
- text-transform: uppercase;
 }
 
 /** Set styling for parklocation text in list results section*/
@@ -96,7 +95,7 @@
 #text{
   text-align: center;
   margin: 0 auto 0 auto;
-  max-width: 60%;
+  max-width: 80%;
 }
 
 /** Set universal padding and margin */

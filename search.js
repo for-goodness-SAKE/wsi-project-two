@@ -151,3 +151,97 @@ function showCheckboxes2() {
 function reset() {
   document.getElementById("filter").reset();
 }
+
+//Pull in the activity names from the NPS API and display them as options in the drop down list
+function activities() {
+  const Http = new XMLHttpRequest();
+  const url = 'https://developer.nps.gov/api/v1/activities?activitiesCode=acad&api_key=' + nps_token;
+  Http.open("GET", url, false);
+  Http.send(null);
+  var res = Http.responseText;
+  responseJson = JSON.parse(res);
+  var list = (responseJson.data).length;
+  for (var i = 0; i < list; i++) {
+    var counter = responseJson.data[i].name;
+    id =  responseJson.data[i].id;
+    console.log(counter);
+    console.log(id);
+    
+    document.getElementById("checkboxes1").innerHTML += 
+              "<input type='checkbox' /> " + counter + " <br />";
+     
+  }
+}
+activities();
+
+
+function showCheckboxes2() {
+  var checkboxes = document.getElementById("checkboxes2");
+  if (!expanded) {
+    checkboxes.style.display = "block";
+    expanded = true;
+  } else {
+    checkboxes.style.display = "none";
+    expanded = false;
+  }
+}
+
+//Pull in the activity names from the NPS API and display them as options in the drop down list
+function interests() {
+  const Http = new XMLHttpRequest();
+  const url = 'https://developer.nps.gov/api/v1/topics?topicsCode=acad&api_key=' + nps_token;
+  Http.open("GET", url, false);
+  Http.send(null);
+  var res = Http.responseText;
+  responseJson = JSON.parse(res);
+  var list = (responseJson.data).length;
+  for (var i = 0; i < list; i++) {
+    var counter = responseJson.data[i].name;
+    id =  responseJson.data[i].id;
+    console.log(counter);
+    console.log(id);
+    
+    document.getElementById("checkboxes2").innerHTML += 
+              "<input type='checkbox' /> " + counter + " <br />";
+     
+  }
+}
+interests();
+
+
+//Display results of National Parks
+function parks() {
+  const Http = new XMLHttpRequest();
+  const url = 'https://developer.nps.gov/api/v1/parks?&api_key=' + nps_token;
+  Http.open("GET", url, false);
+  Http.send(null);
+  var res = Http.responseText;
+  responseJson = JSON.parse(res);
+  var list = (responseJson.data).length;
+  for (var i = 0; i < list; i++) {
+    var fullName = responseJson.data[i].fullName;
+    var id =  responseJson.data[i].id;
+    var description = responseJson.data[i].description;
+    var parkLink = responseJson.data[i].url;
+    var latitude = responseJson.data[i].latitude;
+    var longitude = responseJson.data[i].longitude;
+    var latLong = responseJson.data[i].latLong;
+    //console.log(fullName);
+    
+    //Display results
+    document.getElementById("text").innerHTML += 
+              "<br><p id= 'parkname'> <a href='"+parkLink+"'> <b>" + fullName + "</b> </a></p>" + 
+              "<p id= 'parkdescription'> " + description + "</p>" + 
+              "<p id= 'parklocation'>" + "</p>";
+    
+    //Converting the Latitude and Longitude to an Address
+    
+    }
+       
+}
+parks();
+
+
+function reset() {
+  document.getElementById("filter").reset();
+}
