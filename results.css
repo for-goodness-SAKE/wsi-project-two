@@ -49,12 +49,15 @@
   width: 70%;
 }
 
+<<<<<<< Updated upstream
 /** Set styling for parkimage in list results section*/
 #parkimage{
   max-width: 50%;
   padding: 1em;
 }
 
+=======
+>>>>>>> Stashed changes
 /** Set styling for parkname text in list results section*/
 #parkname{
  font-weight: bold;
@@ -65,10 +68,13 @@
 }
 
 /** Set styling for parkdesignation text in list results section*/
+<<<<<<< Updated upstream
 #parkdesignation{
+=======
+#parkdescription{
+>>>>>>> Stashed changes
  font-family: times, serif;
  font-size: 1em;
- text-transform: uppercase;
 }
 
 /** Set styling for parklocation text in list results section*/
@@ -77,6 +83,7 @@
   font-size: 1em;
 }
 
+<<<<<<< Updated upstream
 /** Set styling for parkradius text in list results section*/
 #parkradius{
  font-style: italic;
@@ -92,11 +99,13 @@
   max-width: 60%;
 }
 
+=======
+>>>>>>> Stashed changes
 /** Set styling and positioning for park information article in list results section*/
 #text{
   text-align: center;
   margin: 0 auto 0 auto;
-  max-width: 60%;
+  max-width: 80%;
 }
 
 /** Set universal padding and margin */
