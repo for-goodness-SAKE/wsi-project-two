@@ -350,3 +350,40 @@ function interestFilter(interests_id) {
 }
 
 interestFilter();
+
+
+/**  
+*  Function to pull in the Park results from NPS website and show as list results
+* @function parks
+*/
+function parks() {
+  /** Get ParkInformation such as park name, park description and park links from NPS API */
+  const Http = new XMLHttpRequest();
+  const url = 'https://developer.nps.gov/api/v1/parks?&api_key=' + nps_token;
+  Http.open("GET", url, false);
+  Http.send(null);
+  var res = Http.responseText;
+  responseJson = JSON.parse(res);
+  var list = (responseJson.data).length;
+ 
+  for (var i = 0; i < list; i++) {
+    var fullName = responseJson.data[i].fullName; /** Get Parkname*/
+    var id =  responseJson.data[i].id; /** Get Parkid*/
+    var description = responseJson.data[i].description; /** Get Parkdescription*/
+    var parkLink = responseJson.data[i].url; /** Get Park url that redirects to NPS website*/
+    var latitude = responseJson.data[i].latitude; /** Get Park latitude coordinate*/
+    var longitude = responseJson.data[i].longitude; /** Get Park longitude coordinate*/
+    var state = responseJson.data[i].states; /** Get Park location - state*/
+
+    /** Display list results that shows park informationID*/
+    document.getElementById("text").innerHTML += 
+              "<br><p id= 'parkname'> <a href='"+ parkLink +"'> <b>" + fullName + "</b> </a></p>" + 
+              "<p id= 'parkdescription'> " + description + "</p>"
+              + "<p id= 'parklocation'><b> State: </b>" + state +"</p>";
+    
+    console.log(fullName);
+    }
+   
+}
+parks();
+
