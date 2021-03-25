@@ -44,7 +44,7 @@ Below is the functionality documentation for our Project that includes commands 
 
 ***Progressive disclosure:*** Radius filter is disclosed only when the user inputs value in the Location placeholder.
 
-**2. Radius:** (Functionality to add in next sprint) <br>
+**2. Radius:** <br>
 Defaulted to <50 miles. Users must select the radius from dropdown with a range from <10 miles to >300 miles.
 
 **3. Search Button:** <br>
@@ -59,7 +59,7 @@ Resets the location and radius place holders.
 ***Advanced Filters:*** <br>
 Users can use the advanced filters- activities and interests to display more specific map and list results.
 
-![image](https://user-images.githubusercontent.com/46754241/112546688-be6f5200-8d87-11eb-865a-40dab0dc6118.png)
+![image](https://user-images.githubusercontent.com/46754241/112555467-3e9cb400-8d96-11eb-947d-9a09ca50f86a.png)
 
 **API used:** National Park Service API <br>
 **1. Activities:** <br>
@@ -81,13 +81,13 @@ Checkbox dropdown with interests’ names fetched from NPS website. The JSON dat
 The location coordinates from the index page are passed to the map on the results page, which marks the location of the user in the map (Blue star marker). <br>
 **API used:** https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap
 
-![image](https://user-images.githubusercontent.com/46754241/112546905-13ab6380-8d88-11eb-9580-73b945a90c1e.png)
+![image](https://user-images.githubusercontent.com/46754241/112555425-29278a00-8d96-11eb-8b74-22702747050b.png)
 
 **4. List Results:** <br>
-Park information such as park name, park description and park location are displayed based on the user's location and radius (next sprint) from the index page. The JSON data for park name, individual park links, park description, and state location, were pulled using the XMLHttpRequest GET request. <br>
+Park information such as park name, park description, park location and park distance from user's location are displayed based on the user's location and radius from the index page. The JSON data for park name, individual park links, park description, and state location, were pulled using the XMLHttpRequest GET request. <br>
 **API used:** https://developer.nps.gov/api/v1/parks?parkCode=acad&api_key=
 
-![image](https://user-images.githubusercontent.com/46754241/112547007-2faf0500-8d88-11eb-8cae-024de309885b.png)
+![image](https://user-images.githubusercontent.com/46754241/112555684-a94def80-8d96-11eb-892c-545330d40633.png)
 
 Advanced filter options (activities and interests) are used to get more specific results.
 
