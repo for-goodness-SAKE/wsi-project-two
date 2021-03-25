@@ -257,6 +257,7 @@ document.getElementById("checkboxes2").addEventListener('change', function() {
 /**  
 * Function to create an Interest filter. If the checkbox(es) for Interests are selected, then display the park results with those attributes.
 * @function activitiesFilter
+* @param {String} activity_id Activity id 
 */
 function activitiesFilter(activity_id) {
   /** Get ParkInformation such as park name, park description and park links from NPS API */
@@ -304,6 +305,7 @@ activitiesFilter();
 /**  
 * Function to create an Interest filter. If the checkbox(es) for Interests are selected, then display the park results with those attributes.
 * @function interestFilter
+* @param {String} interests_id Interests id 
 */
 function interestFilter(interests_id) {
 
