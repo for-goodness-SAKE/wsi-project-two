@@ -192,7 +192,7 @@ document.getElementById("checkboxes1").addEventListener('change', function() {
     //console.log(activity_id); /** Get checked activity id*/
     //console.log(activity_name); /** Get checked activity name*/
 
-    parks(activity_id); //Pass the selected activity id to the parks function, where activity filter takes place
+    activitiesFilter(activity_id); //Pass the selected activity id to the activitiesFilter function
 
     }
     if(i>0){
@@ -228,7 +228,7 @@ function interests() {
 }
 interests();
 
-/** Get the checked checkbox values for activities */
+/** Get the checked checkbox values for interests */
 document.getElementById("checkboxes2").addEventListener('change', function() {
   var interests = document.getElementById("checkboxes2").querySelectorAll('input[type="checkbox"]:checked');
   var j=0;
@@ -255,10 +255,10 @@ document.getElementById("checkboxes2").addEventListener('change', function() {
 });
 
 /**  
-* Function to pull in the Park results from NPS website and show as list results
-* @function parks
+* Function to create an Interest filter. If the checkbox(es) for Interests are selected, then display the park results with those attributes.
+* @function activitiesFilter
 */
-function parks(activity_id) {
+function activitiesFilter(activity_id) {
   /** Get ParkInformation such as park name, park description and park links from NPS API */
   const Http = new XMLHttpRequest();
   const url = 'https://developer.nps.gov/api/v1/parks?&api_key=' + nps_token;
@@ -298,7 +298,7 @@ function parks(activity_id) {
     }
    
 }
-parks();
+activitiesFilter();
 
 
 /**  
