@@ -386,7 +386,7 @@ function parks(lat, long, radius) {
                 "<br><p id= 'parkname'> <a href='"+ parkLink +"'> <b>" + fullName + "</b> </a></p>" + 
                 "<p id= 'parkdescription'> " + description + "</p>"
                 + "<p id= 'parklocation'><b> State: </b>" + state +"</p>"
-                + "<p id= 'distance'><b> Distance Away (miles): </b>" + Math.round(distanceBetween) +"</p>";
+                + "<p id= 'distance'><b> Distance away in miles: </b>" + Math.round(distanceBetween) +"</p>";
       //console.log(fullName);
     }
   }  
