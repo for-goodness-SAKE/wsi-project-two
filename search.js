@@ -348,15 +348,17 @@ function interestFilter(interests_id) {
       }
 }
 }
-
 interestFilter();
 
 
 /**  
 *  Function to pull in the Park results from NPS website and show as list results
 * @function parks
+* @param {Number} lat Latitude
+* @param {Number} long Longitude
+* @param {Number} radius Radius 
 */
-function parks() {
+function parks(lat, long, radius) {
   /** Get ParkInformation such as park name, park description and park links from NPS API */
   const Http = new XMLHttpRequest();
   const url = 'https://developer.nps.gov/api/v1/parks?&api_key=' + nps_token;
@@ -375,15 +377,32 @@ function parks() {
     var longitude = responseJson.data[i].longitude; /** Get Park longitude coordinate*/
     var state = responseJson.data[i].states; /** Get Park location - state*/
 
-    /** Display list results that shows park informationID*/
-    document.getElementById("text").innerHTML += 
-              "<br><p id= 'parkname'> <a href='"+ parkLink +"'> <b>" + fullName + "</b> </a></p>" + 
-              "<p id= 'parkdescription'> " + description + "</p>"
-              + "<p id= 'parklocation'><b> State: </b>" + state +"</p>";
-    
-    console.log(fullName);
+    //compare lat and long with radius
+    var distanceBetween = distance(latitude, longitude, lat, long);
+    //console.log(distanceBetween);
+    if(distanceBetween<=radius){
+      /** Display list results that shows park informationID*/
+      document.getElementById("text").innerHTML += 
+                "<br><p id= 'parkname'> <a href='"+ parkLink +"'> <b>" + fullName + "</b> </a></p>" + 
+                "<p id= 'parkdescription'> " + description + "</p>"
+                + "<p id= 'parklocation'><b> State: </b>" + state +"</p>"
+                + "<p id= 'distance'><b> Distance away in miles: </b>" + Math.round(distanceBetween) +"</p>";
+      //console.log(fullName);
     }
-   
+  }  
 }
-parks();
+parks(localStorage.getItem("latitude"), localStorage.getItem("longitude"), localStorage.getItem("radius"));
 
+function distance(lat1, lng1, lat2, lng2) {
+  function deg2rad(deg){return deg * (Math.PI/180);}
+  function square(x){return Math.pow(x, 2);}
+  var r=6371; // radius of the earth in km
+  lat1=deg2rad(lat1);
+  lat2=deg2rad(lat2);
+  var lat_dif=lat2-lat1;
+  var lng_dif=deg2rad(lng2-lng1);
+  var a=square(Math.sin(lat_dif/2))+Math.cos(lat1)*Math.cos(lat2)*square(Math.sin(lng_dif/2));
+  var d=2*r*Math.asin(Math.sqrt(a));
+  var result = d * 0.621371; //calculate miles
+  return result;
+}
