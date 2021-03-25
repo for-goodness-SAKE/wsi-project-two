@@ -73,6 +73,14 @@
   padding: .25em;
  }
 
+/** Set styling for distance text in list results section*/
+#distance{
+  font-family: times, serif;
+  font-size: 1em;
+  font-style: italic;
+  padding: .25em;
+ }
+
 /** Set styling and positioning for park information article in list results section*/
 #text{
   text-align: center;
