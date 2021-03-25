@@ -268,6 +268,7 @@ function activitiesFilter(activity_id) {
   var res = Http.responseText;
   responseJson = JSON.parse(res);
   var list = (responseJson.data).length;
+  document.getElementById("text").innerHTML = "";
   for (var i = 0; i < list; i++) {
     var fullName = responseJson.data[i].fullName; /** Get Parkname*/
     var id =  responseJson.data[i].id; /** Get Parkid*/
@@ -317,6 +318,7 @@ function interestFilter(interests_id) {
    var res = Http.responseText;
    responseJson = JSON.parse(res);
    var list = (responseJson.data).length;
+   document.getElementById("text").innerHTML = "";
    for (var i = 0; i < list; i++) {
     var fullName = responseJson.data[i].fullName; /** Get Parkname*/
     var id =  responseJson.data[i].id; /** Get Parkid*/
