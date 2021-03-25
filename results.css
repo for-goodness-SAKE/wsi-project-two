@@ -62,7 +62,16 @@
 #parkdescription{
  font-family: times, serif;
  font-size: 1em;
+ padding: .25em;
 }
+
+/** Set styling for parklocation text in list results section*/
+#parklocation{
+  font-family: times, serif;
+  font-size: 1em;
+  font-weight:bold;
+  padding: .25em;
+ }
 
 /** Set styling and positioning for park information article in list results section*/
 #text{
